@@ -1,0 +1,12 @@
+ID,Name,Cuisine,Halal Status,Avg Price (CAD),Booking Required,Neighborhood
+OTT-01,Fairouz Cafe,Modern Middle East,100% Halal,$50,Yes,ByWard Market
+OTT-02,Shawarma Palace,Lebanese,100% Halal,$18,No,Rideau / Multiple
+OTT-03,Les Grillades,Syrian / BBQ,100% Halal,$25,No,Colonnade Rd
+OTT-04,Ottawa Kabab,Middle Eastern,100% Halal,$25,No,Gladstone Ave
+OTT-05,SemSem,Palestinian,100% Halal,$20,No,South Keys
+OTT-06,Yummy Touch,Middle Eastern,100% Halal,$22,No,Lancaster Rd
+OTT-07,Rangoli,Indian,Halal Chicken & Lamb,$30,Recommended,Orleans
+OTT-08,Kochin Kitchen,South Indian,Fully Halal Meat,$28,No,ByWard Market
+OTT-09,Jericho,Lebanese / Art Cafe,100% Halal,$25,No,The Glebe
+OTT-10,Pili Pili,Grilled Chicken,100% Halal,$18,No,Dalhousie
+OTT-11,Aahar,Indian,Halal Meat Options,$30,No,Churchill Ave

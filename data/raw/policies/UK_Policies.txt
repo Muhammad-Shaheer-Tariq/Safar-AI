@@ -1,0 +1,25 @@
+=============================================================================
+FILENAME: UK_Travel_Policies_2026.txt
+METADATA: {"country": "UK", "city": "London", "category": "rules_and_culture"}
+=============================================================================
+# London, UK: Regulations, Culture, and Etiquette
+
+## 1. Visa & Entry (2026 Updates)
+- The Electronic Travel Authorisation (ETA) is now mandatory for previously visa-exempt nationals (including US, Canadian, and Australian citizens). It costs £20 and is valid for two years.
+- Citizens of nations like Pakistan, India, and the UAE still require a Standard Visitor Visa.
+- E-passport gates are available for citizens of the UK, EU, USA, Canada, Australia, New Zealand, and Japan.
+
+## 2. Public Transport & TfL Rules
+- London transport (TfL) is strictly cashless. You must use a contactless bank card, Apple/Google Pay, or purchase an Oyster card.
+- "Tap in and Tap out" is mandatory on the Tube, Overground, and Elizabeth Line to calculate the correct fare. If you fail to tap out, you will be charged a maximum penalty fare of £9.40. For buses, you only tap in.
+- Escalator Etiquette: You MUST stand on the right side of the escalator. The left side is strictly for walking. Blocking the left side is considered highly offensive to commuting Londoners.
+
+## 3. Financial & Tipping Culture
+- Currency: British Pound Sterling (GBP / £).
+- Tipping is generally 10% to 15% in restaurants. However, almost all central London restaurants now automatically add a 12.5% "Optional Service Charge" to the bill. Check your receipt before leaving an extra tip.
+- Tipping in pubs (when ordering drinks at the bar) is not expected.
+
+## 4. Legal & Weather Advisories
+- The weather changes rapidly; layering and carrying a compact umbrella is essential year-round.
+- Jaywalking is not a legal offense in the UK. Pedestrians can cross roads anywhere, but do so at their own risk. Always look Right first when crossing the street.
+- Drinking alcohol is banned on all TfL public transport networks.

@@ -1,0 +1,26 @@
+=============================================================================
+FILENAME: CAN_Ottawa_Travel_Policies.txt
+METADATA: {"country": "Canada", "city": "Ottawa", "category": "rules_and_culture"}
+=============================================================================
+# Ottawa, Canada: Regulations, Culture, and Etiquette
+
+## 1. Visas & Entry
+- Visa-exempt travelers (except US citizens) require an Electronic Travel Authorization (eTA) prior to boarding a flight to Canada. 
+- US Citizens only need a valid US Passport.
+- Other nationalities require a Canadian Visitor Visa.
+
+## 2. Weather & Preparation
+- Ottawa has extreme seasonal variations. Winter (December-March) temperatures frequently drop below -20°C (-4°F) with severe wind chill. Heavy winter coats, thermal layers, gloves, and snow boots are mandatory for safety.
+- Summer is hot and humid, frequently reaching 30°C (86°F).
+
+## 3. Bilingualism & Culture
+- Ottawa borders the province of Quebec (Gatineau). Ottawa is highly bilingual (English and French). 
+- Government services and many signs are in both languages. A simple "Bonjour/Hello" is standard practice.
+- Canadians are known for extreme politeness. Holding doors open and saying "sorry" (even if someone bumps into you) is culturally expected.
+
+## 4. Tipping & Taxes
+- Similar to the USA, displayed prices do not include tax. Ontario adds 13% Harmonized Sales Tax (HST) to almost all goods and services.
+- Tipping is customary. The standard in restaurants is 15% to 20% on the pre-tax amount.
+
+## 5. Transport
+- Public transit relies on the OC Transpo bus network and the O-Train (LRT). You can pay with a Presto card or tap a contactless credit card.

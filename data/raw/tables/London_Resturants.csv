@@ -1,0 +1,12 @@
+ID,Name,Cuisine,Halal Status,Avg Price (£),Booking Required,Neighborhood
+LON-01,Dishoom,Indian,Halal Chicken & Lamb,£35,Yes (Dinner),Covent Garden
+LON-02,Berenjak,Persian,Fully Halal Meat,£45,Yes,Soho
+LON-03,Guanabana,Caribbean / Latin,100% Halal,£25,No,Camden
+LON-04,Stax Diner,American Burger,100% Halal,£20,No,Carnaby
+LON-05,Gymkhana,Fine Indian,"Halal Chicken, Lamb, Goat",£120,Yes (Weeks ahead),Mayfair
+LON-06,Zelman Meats,Steakhouse,Halal cuts available on request,£70,Yes,Knightsbridge
+LON-07,Roti Chai,Indian Street Food,Halal Chicken & Lamb,£30,Recommended,Marylebone
+LON-08,Meat People,Steak / Grill,Specific Halal menu available,£50,Yes,Islington
+LON-09,The Great Nepalese,Nepalese,Fully Halal Meat,£25,No,Euston
+LON-10,Taza Kebab House,Middle Eastern,100% Halal,£12,No,Bayswater
+LON-11,Benares,Michelin Indian,Halal Chicken & Lamb,£95,Yes,Mayfair

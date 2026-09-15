@@ -1,0 +1,22 @@
+=============================================================================
+FILENAME: JPN_Tokyo_Travel_Policies.txt
+METADATA: {"country": "Japan", "city": "Tokyo", "category": "rules_and_culture"}
+=============================================================================
+# Tokyo, Japan: Regulations, Culture, and Etiquette
+
+## 1. Legal Requirements (Strictly Enforced)
+- Passport Law: Foreign tourists MUST carry their physical passport at all times. Police randomly stop foreigners; not having a passport can lead to detainment or arrest.
+- Medication Laws: Japan bans medications containing stimulants. Common over-the-counter allergy/cold drugs from the US or UK containing Pseudoephedrine or Codeine are strictly illegal and will result in arrest at customs.
+
+## 2. Public Behavior
+- Silence on Transit: Talking on mobile phones on trains and buses is deeply disrespectful. Set phones to "Manner Mode" (silent). Conversations should be kept to a whisper.
+- Trash: There are almost no public trash cans in Tokyo. You must carry your garbage with you in a plastic bag until you return to your hotel or find a convenience store.
+- Eating while walking is frowned upon. Consume food/drinks standing near the vending machine or stall where purchased.
+- Escalator Etiquette: In Tokyo, stand on the LEFT, walk on the right. (Note: In Osaka, it is the opposite).
+
+## 3. Financial & Tipping
+- Tipping: DO NOT TIP under any circumstances. It is considered confusing and borderline insulting. If you leave money on a table, staff will chase you down to return it.
+- Currency: While digital payments (Suica, Pasmo, PayPay) are widely accepted in Tokyo, Japan remains heavily cash-reliant for small vendors, temples, and ramen ticket machines. Carry physical Yen.
+
+## 4. Transport
+- Purchase a Welcome Suica or Pasmo Passport at the airport. You tap these IC cards at train barriers and can use them to buy items at convenience stores.

@@ -1,0 +1,12 @@
+ID,Name,Cuisine,Halal Status,Avg Price ($),Booking Required,Neighborhood
+NYC-01,212 Steakhouse,Fine Steakhouse,Certified Halal Wagyu Menu,$150,Yes,Midtown East
+NYC-02,The Halal Guys,Street Food,100% Halal,$12,No,Midtown (53rd & 6th)
+NYC-03,Au Za'atar,Lebanese / Arab,Fully Halal Meat,$45,Recommended,East Village
+NYC-04,Adel's Famous Halal Food,Street Food,100% Halal,$12,No (Expect lines),Midtown
+NYC-05,Ravagh Persian Grill,Persian,Fully Halal Meat,$35,No,Upper East Side
+NYC-06,Top Thai Greenwich,Thai,Halal Chicken & Beef,$30,No,Greenwich Village
+NYC-07,Sappe,Thai Street Food,100% Halal Meat,$40,Recommended,West Village
+NYC-08,Junoon,Michelin Indian,Halal Chicken & Lamb,$120,Yes,Flatiron
+NYC-09,Yemen Cafe,Yemeni / Arab,100% Halal,$25,No,Brooklyn (Cobble Hill)
+NYC-10,Lashevet,Middle Eastern,Kosher/Halal Friendly,$35,No,Upper East Side
+NYC-11,Biryani Cart,Indian Street,100% Halal,$10,No,Midtown

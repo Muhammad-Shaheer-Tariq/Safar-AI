@@ -1,0 +1,25 @@
+=============================================================================
+FILENAME: USA_NYC_Travel_Policies.txt
+METADATA: {"country": "USA", "city": "New York", "category": "rules_and_culture"}
+=============================================================================
+# New York City, USA: Regulations, Culture, and Etiquette
+
+## 1. Visas & Entry
+- Visa Waiver Program (VWP) nationals must apply for an ESTA at least 72 hours before travel. 
+- Other nationalities require a B1/B2 Tourist Visa, which necessitates an embassy interview.
+- Customs and Border Protection (CBP) officers at JFK/Newark have broad authority to search digital devices.
+
+## 2. Tipping & Hidden Costs (Crucial)
+- The price you see on a menu or price tag is NOT the final price. New York City adds an 8.875% sales tax at the register.
+- Tipping is MANDATORY in the US service industry. Waitstaff rely on tips for their base wage.
+- The standard restaurant tip in NYC is 20% of the pre-tax bill. Tipping less than 18% implies terrible service. 
+- You must also tip taxi drivers (15-20%), bellhops ($2-$5 per bag), and bartenders ($1-$2 per drink).
+
+## 3. Public Transport
+- The NYC Subway operates 24/7. Use the OMNY system by tapping any contactless credit card or smartphone at the turnstile (currently $2.90 per ride).
+- Subway etiquette: Do not block the doors, take off backpacks on crowded trains, and let passengers exit before you board.
+- The city operates on a grid system above 14th Street. Avenues run North-South; Streets run East-West.
+
+## 4. Street Safety & Norms
+- New Yorkers walk fast. If you need to stop to look at a map or take a photo, step completely out of the flow of pedestrian traffic to the side of the building.
+- Jaywalking is ubiquitous but technically illegal; follow the crowd and watch for aggressive yellow cabs and delivery e-bikes.

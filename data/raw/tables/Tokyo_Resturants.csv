@@ -1,0 +1,12 @@
+ID,Name,Cuisine,Halal Status,Avg Price (¥),Booking Required,Neighborhood
+TYO-01,Halal Ramen Ouka,Japanese Ramen,100% Halal Certified,"¥2,500",Recommended,Shinjuku
+TYO-02,Halal Yakiniku Gyumon,Wagyu BBQ,Halal Certified Beef,"¥5,500",Yes,Shibuya
+TYO-03,Asakusa Sushi Ken,Sushi,100% Halal Certified,"¥4,000",Recommended,Asakusa
+TYO-04,Ayam-Ya,Chicken Ramen,100% Halal Certified,"¥1,200",No,Okachimachi
+TYO-05,Luxe Burgers,Burgers,Halal Certified Wagyu,"¥1,800",No,Ningyocho
+TYO-06,Tendon Ginza Itsuki,Tempura Bowl,Halal Certified Menu,"¥1,500",No,Ginza
+TYO-07,Naritaya,Japanese Ramen,JIT Halal Certified,"¥1,500",No,Asakusa
+TYO-08,Samarkand Terrace,Uzbek / Central,100% Halal,"¥2,000",No,Takadanobaba
+TYO-09,Yoshi's Passion,Japanese Curry,Halal-friendly Menu,"¥1,300",No,Asakusa
+TYO-10,Wagyu Yakiniku Panga,Wagyu BBQ,Halal Certified Menu,"¥6,000",Yes,Ueno
+TYO-11,Cinta Jawa Cafe,Indonesian,100% Halal,"¥1,500",No,Shibuya
