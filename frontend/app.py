@@ -127,42 +127,58 @@ st.markdown(
     """
     <style>
 
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
     :root {
-        --olive: #65743a;
+        --olive: #6b7a3f;
         --dark-olive: #3f4d22;
-        --olive-pale: #f5f7ef;
-        --olive-soft: #e9eddc;
+        --olive-pale: #f6f8f0;
+        --olive-soft: #eaeeda;
+        --olive-mid: #dbe3c6;
         --line: #d9dfc8;
-        --ink: #28301c;
-        --muted: #68705d;
+        --ink: #262f1c;
+        --muted: #6a715f;
         --white: #ffffff;
+        --cream: #fbfaf5;
+        --gold: #b8923f;
+        --danger: #b3452f;
+        --success: #4f7a3d;
+        --shadow-sm: 0 1px 3px rgba(63, 77, 34, 0.08);
+        --shadow-md: 0 6px 20px rgba(63, 77, 34, 0.10);
+        --radius: 12px;
     }
+
+    /* Hide Streamlit chrome: menu, footer, deploy/GitHub toolbar */
+    #MainMenu {visibility: hidden; height: 0;}
+    footer {visibility: hidden; height: 0;}
+    [data-testid="stToolbar"] {display: none !important;}
+    [data-testid="stDecoration"] {display: none !important;}
+    [data-testid="stStatusWidget"] {display: none !important;}
+    a[href*="github.com"] {display: none !important;}
 
     html,
     body,
     [data-testid="stAppViewContainer"],
     [data-testid="stApp"] {
-        background: var(--white);
+        background: var(--cream);
         color: var(--ink);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     [data-testid="stHeader"] {
-        background: var(--white);
+        background: transparent;
+        height: 0;
     }
 
     .block-container {
         max-width: 1180px;
-        padding-top: 1.2rem;
+        padding-top: 0.6rem;
         padding-bottom: 3rem;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    label,
-    p {
+    h1, h2, h3, h4, label, p {
         color: var(--ink);
+        font-family: 'Inter', sans-serif;
     }
 
     [data-testid="stCaptionContainer"] p {
@@ -176,27 +192,40 @@ st.markdown(
 
     .brand-header {
         width: 100%;
-        padding: 1rem 0 1.2rem;
-        border-bottom: 2px solid var(--olive);
-        margin-bottom: 1.6rem;
-    }
-
-    .brand-mark {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.6rem 0 1.3rem;
+        margin-bottom: 1.8rem;
+        position: relative;
     }
 
     .brand-name {
-        color: var(--dark-olive);
-        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(90deg, var(--dark-olive), var(--olive));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.6rem;
         font-weight: 800;
         line-height: 1.1;
-        letter-spacing: -0.5px;
+        letter-spacing: -1px;
     }
 
     .brand-tagline {
         color: var(--muted);
-        font-size: 0.88rem;
-        margin-top: 0.4rem;
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+        font-weight: 500;
+    }
+
+    .brand-underline {
+        width: 96px;
+        height: 4px;
+        margin-top: 1rem;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--olive), var(--gold));
     }
 
 
@@ -206,104 +235,85 @@ st.markdown(
 
     .welcome-shell {
         max-width: 880px;
-
-        margin: 7vh auto 0;
-
-        padding: 3.4rem 3rem;
-
+        margin: 5vh auto 0;
+        padding: 3.6rem 3.2rem;
         text-align: center;
-
-        background: var(--olive-pale);
-
+        background: var(--white);
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 20px;
+        box-shadow: var(--shadow-md);
     }
 
     .welcome-mark {
-        width: 54px;
-        height: 54px;
-
+        width: 60px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        margin: 0 auto 1rem;
-
-        background: var(--olive);
+        margin: 0 auto 1.2rem;
+        background: linear-gradient(135deg, var(--olive), var(--dark-olive));
         color: var(--white);
-
-        border-radius: 13px;
-
-        font-size: 1.5rem;
+        border-radius: 16px;
+        font-size: 1.6rem;
+        box-shadow: var(--shadow-sm);
     }
 
     .welcome-title {
+        font-family: 'Poppins', sans-serif;
         color: var(--dark-olive);
-
-        font-size: clamp(2.1rem, 5vw, 3.4rem);
-
+        font-size: clamp(2.1rem, 5vw, 3.2rem);
         font-weight: 800;
-
-        line-height: 1.08;
-
+        line-height: 1.1;
         margin-bottom: 1rem;
     }
 
     .welcome-copy {
         color: var(--muted);
-
-        font-size: 1.02rem;
-
+        font-size: 1.03rem;
         line-height: 1.75;
-
-        max-width: 700px;
-
-        margin: 0 auto 2rem;
+        max-width: 680px;
+        margin: 0 auto 1.6rem;
     }
 
     .welcome-note {
         color: var(--ink);
-
-        font-size: 0.9rem;
-
-        line-height: 1.6;
-
-        max-width: 680px;
-
-        margin: 0 auto 2rem;
+        font-size: 0.92rem;
+        line-height: 1.65;
+        max-width: 660px;
+        margin: 0 auto 2.2rem;
+        background: var(--olive-pale);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.9rem 1.1rem;
     }
 
     .feature-list {
-        color: var(--ink);
-
         display: grid;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 0.85rem;
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
         text-align: left;
-
         max-width: 700px;
-
         margin: 0 auto 2.2rem;
     }
 
     .feature-item {
-        background: var(--white);
-
+        background: var(--olive-pale);
         border: 1px solid var(--line);
-
-        border-radius: 10px;
-
-        padding: 1rem 1.1rem;
-
+        border-radius: 12px;
+        padding: 1.05rem 1.15rem;
         line-height: 1.5;
+        transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    .feature-item:hover {
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-2px);
     }
 
     .feature-item strong {
         color: var(--dark-olive);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
     }
 
     .feature-item small {
@@ -316,22 +326,27 @@ st.markdown(
        ========================= */
 
     div[data-baseweb="tab-list"] {
-        gap: 0.25rem;
-
+        gap: 0.4rem;
         border-bottom: 1px solid var(--line);
     }
 
     button[data-baseweb="tab"] {
         color: var(--muted);
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.75rem 1.1rem;
+        border-radius: 8px 8px 0 0;
+        transition: background 0.15s ease, color 0.15s ease;
+    }
 
-        font-weight: 650;
-
-        padding: 0.8rem 1rem;
+    button[data-baseweb="tab"]:hover {
+        background: var(--olive-pale);
+        color: var(--dark-olive);
     }
 
     button[data-baseweb="tab"][aria-selected="true"] {
         color: var(--dark-olive);
-
+        background: var(--olive-soft);
         border-bottom-color: var(--olive);
     }
 
@@ -341,13 +356,12 @@ st.markdown(
        ========================= */
 
     [data-testid="stChatMessage"] {
-        background: var(--olive-pale);
-
+        background: var(--white);
         border: 1px solid var(--line);
-
-        border-radius: 10px;
-
-        margin-bottom: 0.75rem;
+        border-radius: var(--radius);
+        margin-bottom: 0.8rem;
+        padding: 0.4rem 0.2rem;
+        box-shadow: var(--shadow-sm);
     }
 
     [data-testid="stChatMessage"]
@@ -376,8 +390,7 @@ st.markdown(
     [data-testid="stChatMessage"]
     [data-testid="stMarkdownContainer"] code {
         color: var(--dark-olive) !important;
-
-        background: var(--white);
+        background: var(--olive-pale);
     }
 
 
@@ -387,21 +400,20 @@ st.markdown(
 
     [data-testid="stChatInput"] {
         background: var(--white) !important;
-
         border: 1.5px solid var(--olive) !important;
+        border-radius: 14px !important;
+        box-shadow: var(--shadow-sm);
+    }
 
-        border-radius: 12px !important;
-
-        box-shadow:
-            0 2px 8px rgba(63, 77, 34, 0.08);
+    [data-testid="stChatInput"]:focus-within {
+        border-color: var(--dark-olive) !important;
+        box-shadow: 0 0 0 3px rgba(107, 122, 63, 0.18);
     }
 
     [data-testid="stChatInput"] textarea,
     [data-testid="stChatInput"] input {
         color: var(--ink) !important;
-
         background: var(--white) !important;
-
         -webkit-text-fill-color: var(--ink) !important;
     }
 
@@ -409,11 +421,9 @@ st.markdown(
     textarea::placeholder,
     [data-testid="stChatInput"]
     input::placeholder {
-        color: #65705b !important;
-
+        color: #7c8570 !important;
         opacity: 1 !important;
-
-        -webkit-text-fill-color: #65705b !important;
+        -webkit-text-fill-color: #7c8570 !important;
     }
 
 
@@ -426,23 +436,25 @@ st.markdown(
     [data-baseweb="select"] input,
     [data-baseweb="select"] > div {
         color: var(--ink) !important;
-
         background: var(--white) !important;
-
         border-color: var(--line) !important;
-
+        border-radius: 8px !important;
         -webkit-text-fill-color: var(--ink) !important;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--olive) !important;
+        box-shadow: 0 0 0 2px rgba(107, 122, 63, 0.15) !important;
     }
 
     input::placeholder,
     textarea::placeholder,
     [data-baseweb="select"]
     input::placeholder {
-        color: #65705b !important;
-
+        color: #7c8570 !important;
         opacity: 1 !important;
-
-        -webkit-text-fill-color: #65705b !important;
+        -webkit-text-fill-color: #7c8570 !important;
     }
 
 
@@ -452,16 +464,23 @@ st.markdown(
 
     button[kind="primary"] {
         background: var(--olive);
-
         border-color: var(--olive);
-
         color: var(--white);
+        border-radius: 10px;
+        font-weight: 600;
+        transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
     }
 
     button[kind="primary"]:hover {
         background: var(--dark-olive);
-
         border-color: var(--dark-olive);
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-1px);
+    }
+
+    button[kind="secondary"] {
+        border-radius: 10px;
+        font-weight: 600;
     }
 
 
@@ -470,21 +489,26 @@ st.markdown(
        ========================= */
 
     [data-testid="stMetric"] {
-        background: var(--olive-pale);
-
+        background: var(--white);
         border: 1px solid var(--line);
-
-        padding: 1rem;
-
-        border-radius: 10px;
+        border-top: 3px solid var(--olive);
+        padding: 1.05rem 1.1rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
     }
 
     [data-testid="stMetricValue"] {
         color: var(--dark-olive);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: var(--muted);
+        font-weight: 600;
     }
 
     [data-testid="stProgressBar"] > div > div {
-        background: var(--olive);
+        background: linear-gradient(90deg, var(--olive), var(--gold));
     }
 
 
@@ -494,14 +518,29 @@ st.markdown(
 
     .empty-state {
         background: var(--olive-pale);
-
         border: 1px dashed #c5cfaa;
-
-        border-radius: 10px;
-
-        padding: 1.25rem;
-
+        border-radius: var(--radius);
+        padding: 1.3rem;
         color: var(--muted);
+        text-align: center;
+        font-size: 0.92rem;
+    }
+
+
+    /* =========================
+       FORMS / CONTAINERS
+       ========================= */
+
+    [data-testid="stForm"] {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.2rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    hr, [data-testid="stDivider"] {
+        border-color: var(--line) !important;
     }
 
 
@@ -512,21 +551,20 @@ st.markdown(
     @media (max-width: 720px) {
 
         .block-container {
-            padding: 1rem 0.9rem 2rem;
+            padding: 0.8rem 0.9rem 2rem;
         }
 
         .brand-header {
-            padding-bottom: 0.9rem;
+            padding: 1.1rem 0 1rem;
         }
 
         .brand-name {
-            font-size: 1.35rem;
+            font-size: 1.7rem;
         }
 
         .welcome-shell {
             margin-top: 3vh;
-
-            padding: 2.3rem 1.2rem;
+            padding: 2.2rem 1.2rem;
         }
 
         .welcome-title {
@@ -539,15 +577,12 @@ st.markdown(
 
         div[data-baseweb="tab-list"] {
             overflow-x: auto;
-
             flex-wrap: nowrap;
         }
 
         button[data-baseweb="tab"] {
             min-width: max-content;
-
             padding-left: 0.65rem;
-
             padding-right: 0.65rem;
         }
     }
@@ -637,6 +672,7 @@ st.markdown(
         <div class="brand-tagline">
             Intelligent travel planning, live travel tools, and budget control.
         </div>
+        <div class="brand-underline"></div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -666,8 +702,8 @@ with assistant_tab:
     st.subheader("AI Travel Assistant")
 
     st.caption(
-        "Ask about policies, halal restaurants, attractions, weather, "
-        "budget, or your itinerary."
+        "Ask about destinations, halal restaurants, attractions, weather, "
+        "your budget, or your itinerary — all in one conversation."
     )
 
     for message in st.session_state.chat_history:
@@ -676,7 +712,7 @@ with assistant_tab:
             st.markdown(message["content"])
 
     prompt = st.chat_input(
-        "Ask about your destination, budget, restaurants, places, weather, or travel policies..."
+        "Ask SafarAI — e.g. \"Plan a 5-day trip to Istanbul under 150,000 PKR\""
     )
 
     if prompt:
@@ -748,7 +784,7 @@ with budget_tab:
 
     st.caption(
         "This view is synchronized with the budget stored for "
-        "your LangGraph conversation."
+        "your current SafarAI conversation."
     )
 
     metrics = st.session_state.metrics
@@ -851,17 +887,17 @@ with budget_tab:
 
         expense_description = st.text_input(
             "Expense name",
-            placeholder="e.g. Dubai hotel"
+            placeholder="e.g. Dubai hotel — 3 nights"
         )
 
         expense_amount = st.text_input(
             "Amount (PKR)",
-            placeholder="e.g. 60000"
+            placeholder="e.g. 60,000"
         )
 
         expense_category = st.text_input(
             "Category",
-            placeholder="e.g. Accommodation"
+            placeholder="e.g. Accommodation, Food, Transport"
         )
 
         add_expense = st.form_submit_button(
@@ -944,7 +980,7 @@ with budget_tab:
 
         st.markdown(
             '<div class="empty-state">'
-            'No expenses recorded yet.'
+            'No expenses recorded yet. Add one above to see it here.'
             '</div>',
             unsafe_allow_html=True
         )
@@ -978,7 +1014,7 @@ with budget_tab:
         st.markdown(
             '<div class="empty-state">'
             'No confirmed expenses yet. Add an activity through '
-            'the Assistant.'
+            'the Assistant tab or the form above.'
             '</div>',
             unsafe_allow_html=True
         )
@@ -993,14 +1029,14 @@ with weather_tab:
     st.subheader("🌤️ Destination Weather")
 
     st.caption(
-        "Live conditions from the travel assistant's weather service."
+        "Live conditions from SafarAI's weather service."
     )
 
     with st.form("weather_form"):
 
         weather_city = st.text_input(
             "City",
-            placeholder="London"
+            placeholder="e.g. Istanbul, Dubai, London"
         )
 
         check_weather = st.form_submit_button(
@@ -1106,7 +1142,7 @@ with currency_tab:
 
         amount_text = st.text_input(
             "Amount",
-            placeholder="Enter amount"
+            placeholder="e.g. 1,000"
         )
 
         from_currency = st.selectbox(
