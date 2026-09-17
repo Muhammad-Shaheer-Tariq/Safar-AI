@@ -587,6 +587,116 @@ st.markdown(
         }
     }
 
+
+    /* =========================
+       ANIMATIONS
+       ========================= */
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.96); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes shimmer {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+    }
+
+    @keyframes pulseRing {
+        0% { box-shadow: 0 0 0 0 rgba(107, 122, 63, 0.35); }
+        100% { box-shadow: 0 0 0 10px rgba(107, 122, 63, 0); }
+    }
+
+    .brand-header {
+        animation: fadeInUp 0.6s ease both;
+    }
+
+    .brand-underline {
+        background: linear-gradient(90deg, var(--olive), var(--gold), var(--olive));
+        background-size: 200% auto;
+        animation: shimmer 3.5s linear infinite;
+    }
+
+    .welcome-shell {
+        animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .welcome-mark {
+        animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .feature-item {
+        animation: fadeInUp 0.55s ease both;
+    }
+
+    .feature-list .feature-item:nth-child(1) { animation-delay: 0.05s; }
+    .feature-list .feature-item:nth-child(2) { animation-delay: 0.12s; }
+    .feature-list .feature-item:nth-child(3) { animation-delay: 0.19s; }
+    .feature-list .feature-item:nth-child(4) { animation-delay: 0.26s; }
+
+    [data-testid="stChatMessage"] {
+        animation: fadeInUp 0.4s ease both;
+    }
+
+    [data-testid="stMetric"] {
+        animation: fadeInUp 0.45s ease both;
+    }
+
+    .result-card {
+        animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--olive);
+        border-radius: var(--radius);
+        padding: 1.2rem 1.3rem;
+        margin-bottom: 1.2rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .result-card h3 {
+        margin-top: 0;
+    }
+
+    .search-again-label {
+        color: var(--muted);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin: 0.4rem 0 0.6rem;
+    }
+
+    .empty-state {
+        animation: fadeIn 0.5s ease both;
+    }
+
+    button[kind="primary"]:active {
+        transform: scale(0.98);
+    }
+
+    button[kind="primary"]:focus-visible {
+        animation: pulseRing 0.6s ease-out;
+    }
+
+    [data-testid="stForm"] {
+        animation: fadeInUp 0.4s ease both;
+    }
+
+    /* smooth tab panel transitions */
+    [data-testid="stTabsContent"] > div {
+        animation: fadeIn 0.35s ease both;
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
@@ -1032,6 +1142,54 @@ with weather_tab:
         "Live conditions from SafarAI's weather service."
     )
 
+    weather = st.session_state.weather_result
+
+    if weather and weather.get("error"):
+
+        st.error(weather["error"])
+
+    elif weather:
+
+        st.markdown(
+            '<div class="result-card">'
+            f'<h3>{weather.get("location", "")}, '
+            f'{weather.get("country", "")}</h3>'
+            '</div>',
+            unsafe_allow_html=True
+        )
+
+        temperature, wind, rain = st.columns(3)
+
+        temperature.metric(
+            "Temperature",
+            f"{weather.get('temperature_c', '—')} °C"
+        )
+
+        wind.metric(
+            "Wind",
+            f"{weather.get('wind_speed_kmh', '—')} km/h"
+        )
+
+        rain.metric(
+            "Precipitation",
+            f"{weather.get('precipitation_mm', '—')} mm"
+        )
+
+        st.markdown(
+            '<div class="search-again-label">Search another city</div>',
+            unsafe_allow_html=True
+        )
+
+    else:
+
+        st.markdown(
+            '<div class="empty-state">'
+            'Search a city to see its current temperature, '
+            'wind, and precipitation.'
+            '</div>',
+            unsafe_allow_html=True
+        )
+
     with st.form("weather_form"):
 
         weather_city = st.text_input(
@@ -1075,45 +1233,7 @@ with weather_tab:
                         "error": format_error(error)
                     }
 
-    weather = st.session_state.weather_result
-
-    if weather and weather.get("error"):
-
-        st.error(weather["error"])
-
-    elif weather:
-
-        st.markdown(
-            f"### {weather.get('location', weather_city)}, "
-            f"{weather.get('country', '')}"
-        )
-
-        temperature, wind, rain = st.columns(3)
-
-        temperature.metric(
-            "Temperature",
-            f"{weather.get('temperature_c', '—')} °C"
-        )
-
-        wind.metric(
-            "Wind",
-            f"{weather.get('wind_speed_kmh', '—')} km/h"
-        )
-
-        rain.metric(
-            "Precipitation",
-            f"{weather.get('precipitation_mm', '—')} mm"
-        )
-
-    else:
-
-        st.markdown(
-            '<div class="empty-state">'
-            'Search a city to see its current temperature, '
-            'wind, and precipitation.'
-            '</div>',
-            unsafe_allow_html=True
-        )
+            st.rerun()
 
 
 # =========================
@@ -1137,6 +1257,48 @@ with currency_tab:
         "JPY",
         "CAD"
     ]
+
+    currency = st.session_state.currency_result
+
+    if currency and currency.get("error"):
+
+        st.error(currency["error"])
+
+    elif currency:
+
+        st.markdown('<div class="result-card">', unsafe_allow_html=True)
+
+        st.metric(
+            f"{currency.get('amount', 0):,.2f} "
+            f"{currency.get('from_currency', '')}",
+
+            f"{currency.get('converted_amount', 0):,.2f} "
+            f"{currency.get('to_currency', '')}"
+        )
+
+        st.caption(
+            f"Live rate: 1 "
+            f"{currency.get('from_currency', '')} = "
+            f"{currency.get('rate', '—')} "
+            f"{currency.get('to_currency', '')}"
+        )
+
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        st.markdown(
+            '<div class="search-again-label">Convert another amount</div>',
+            unsafe_allow_html=True
+        )
+
+    else:
+
+        st.markdown(
+            '<div class="empty-state">'
+            'Choose currencies and enter an amount to get a live '
+            'conversion.'
+            '</div>',
+            unsafe_allow_html=True
+        )
 
     with st.form("currency_form"):
 
@@ -1209,35 +1371,4 @@ with currency_tab:
                         "error": format_error(error)
                     }
 
-    currency = st.session_state.currency_result
-
-    if currency and currency.get("error"):
-
-        st.error(currency["error"])
-
-    elif currency:
-
-        st.metric(
-            f"{currency.get('amount', 0):,.2f} "
-            f"{currency.get('from_currency', from_currency)}",
-
-            f"{currency.get('converted_amount', 0):,.2f} "
-            f"{currency.get('to_currency', to_currency)}"
-        )
-
-        st.caption(
-            f"Live rate: 1 "
-            f"{currency.get('from_currency', from_currency)} = "
-            f"{currency.get('rate', '—')} "
-            f"{currency.get('to_currency', to_currency)}"
-        )
-
-    else:
-
-        st.markdown(
-            '<div class="empty-state">'
-            'Choose currencies and enter an amount to get a live '
-            'conversion.'
-            '</div>',
-            unsafe_allow_html=True
-        )
+        st.rerun()
