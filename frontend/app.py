@@ -69,7 +69,7 @@ def reset_session() -> None:
 
 
 def format_error(error: Exception) -> str:
-    return "The backend is unavailable right now. Please try again shortly."
+        return f"Backend error: {error}"
 
 
 initialize_session()
