@@ -175,41 +175,28 @@ st.markdown(
        ========================= */
 
     .brand-header {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 0.7rem 0 1.1rem;
-        border-bottom: 1px solid var(--line);
+        width: 100%;
+        padding: 1rem 0 1.2rem;
+        border-bottom: 2px solid var(--olive);
         margin-bottom: 1.6rem;
     }
 
     .brand-mark {
-        width: 42px;
-        height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: var(--olive);
-        color: var(--white);
-
-        border-radius: 10px;
-
-        font-size: 1.25rem;
-        font-weight: 700;
+        display: none;
     }
 
     .brand-name {
         color: var(--dark-olive);
-        font-size: 1.55rem;
+        font-size: 2rem;
         font-weight: 800;
-        line-height: 1;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
     }
 
     .brand-tagline {
         color: var(--muted);
-        font-size: 0.82rem;
-        margin-top: 0.3rem;
+        font-size: 0.88rem;
+        margin-top: 0.4rem;
     }
 
 
@@ -642,17 +629,17 @@ if st.session_state.show_welcome:
 # BRAND HEADER
 # =========================
 
+# SafarAI header
 st.markdown(
-    '<div class="brand-header">'
-    '<div class="brand-mark">✈</div>'
-    '<div>'
-    '<div class="brand-name">SafarAI</div>'
-    '<div class="brand-tagline">'
-    'Intelligent travel planning, live travel tools, and budget control.'
-    '</div>'
-    '</div>'
-    '</div>',
-    unsafe_allow_html=True
+    """
+    <div class="brand-header">
+        <div class="brand-name">SafarAI</div>
+        <div class="brand-tagline">
+            Intelligent travel planning, live travel tools, and budget control.
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 
