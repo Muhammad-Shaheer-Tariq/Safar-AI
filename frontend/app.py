@@ -5,7 +5,10 @@ from collections import defaultdict
 import requests
 import streamlit as st
 
-BACKEND_HOST = os.getenv("BACKEND_URL", "http://localhost:8000").rstrip("/")
+BACKEND_HOST = os.getenv(
+    "BACKEND_URL",
+    "https://safar-ai-production-b944.up.railway.app"
+).rstrip("/")
 CHAT_URL = f"{BACKEND_HOST}/api/chat"
 STATE_URL = f"{BACKEND_HOST}/api/state"
 WEATHER_URL = f"{BACKEND_HOST}/api/weather"
